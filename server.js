@@ -12,6 +12,8 @@ mercadopago.configure({
     sandbox: true,
     access_token: 'TEST-4332423066954571-102200-779dd861dfaa9f6acb7609a1887ee3f3-191014229'
 });
+const options = { transports: ['websocket'], pingTimeout: 3000, pingInterval: 5000 };
+
 
 /*
  * IMPORTTAR SOCKETS
@@ -80,6 +82,8 @@ zoneRoutes(app);
 server.listen(3000, () => {
     console.log(`server started on port 3000`);
   });
+
+  server.timeout = 0;
 
 
 // ERROR HANDLER
