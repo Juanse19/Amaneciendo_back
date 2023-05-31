@@ -116,7 +116,7 @@ module.exports = {
             else {
                 return res.status(401).json({ // EL CLIENTE NO TIENE AUTORIZACION PARTA REALIZAR ESTA PETICION (401)
                     success: false,
-                    message: 'El password es incorrecto'
+                    // message: 'El password es incorrecto'
                 });
             }
 
